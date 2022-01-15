@@ -20,7 +20,7 @@ I have over thirty years’ experience in the information technology field. I cu
 - All About The Data [AATD] (Chief Technical Advisor)
 
 I'm also an educator who has taught at the following universities:
-- Temple University
+- Temple University (Graduate and Undergradate courses)
    - CIS 541 – Computer Systems and Operating Environments
    - CIS 543 – Methods in Information Systems
    - CIS 578 – User Interface Design and System Integration
@@ -28,17 +28,16 @@ I'm also an educator who has taught at the following universities:
    - CIS 10 – Computers and Applications
    - CIS 55 – Computers and Applications
    - CIS 410 – Information Technology Process Management
-- University of Maryland Global Campus
+- University of Maryland Global Campus (Graduate courses)
    - DATA 620 – Data Management and Visualization
 - Purdue University Global Campus
    - IT232 – Software Design and Development Concepts
-- Colorado Technical University
+- Colorado Technical University (Doctoral courses)
    - CS872/CS877 – Introduction to Big Data Analytics
    - CS879 – Advanced Topics in Big Data Analytics
    - CS882 – Tools for Big Data Analytics
    - CS881 – Analytics for Big Data
    - CS828 – Advanced Topics in Database Systems
-
 
 I’ve been involved with big data for many years. In 1998, I worked on a 2TB data warehouse solution for Microsoft, which at the time was one of the largest data warehouses not on a mainframe – an example of high volume. I’ve worked on a 99.999% high availability solution for NASDAQ that offloaded quotes from the mainframe to WinTel server – example of high velocity.
 
