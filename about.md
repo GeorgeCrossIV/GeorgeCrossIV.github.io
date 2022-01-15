@@ -42,7 +42,7 @@ I'm also an educator who has taught at the following universities:
 
 I’ve been involved with big data for many years. In 1998, I worked on a 2TB data warehouse solution for Microsoft, which at the time was one of the largest data warehouses not on a mainframe – an example of high volume. I’ve worked on a 99.999% high availability solution for NASDAQ that offloaded quotes from the mainframe to WinTel server – example of high velocity.
 
-I’m an expert on Microsoft’s application platform technologies (SQL Server, Visual Studio, Azure). I’m have intermediate knowledge in Oracle’s and IBM’s database technologies. I'm also have intermediate expertise in big data technologies such as Apache Cassandra and Apache Hadoop. I am knowledgeable in several other database technologies such as Postgres. I hold the following certifications:
+I have intermediate/expert knowledge of Microsoft’s application platform technologies (SQL Server, Visual Studio, Azure). I’m have intermediate knowledge of Oracle’s and IBM’s database technologies. I'm also have intermediate expertise of big data technologies such as Apache Cassandra and Apache Hadoop. I am knowledgeable in several other database technologies such as Postgres. I hold the following certifications:
 - MCDBA – Microsoft certified database administrator
 - MCSE – Microsoft certified system engineer
 - MCSD – Microsoft certified solution developer (VB & C#)
