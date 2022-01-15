@@ -30,7 +30,7 @@ I'm also an educator who has taught at the following universities:
    - CIS 410 – Information Technology Process Management
 - University of Maryland Global Campus (Graduate courses)
    - DATA 620 – Data Management and Visualization
-- Purdue University Global Campus
+- Purdue University Global Campus (Undergraduate courses)
    - IT232 – Software Design and Development Concepts
 - Colorado Technical University (Doctoral courses)
    - CS872/CS877 – Introduction to Big Data Analytics
