@@ -67,6 +67,7 @@ By the end of this article, the reader should be able to create a data store in 
     );
 ~~~
 - create the users table
+~~~
     CREATE TABLE users (
         user_id TEXT,
         first_name TEXT,
