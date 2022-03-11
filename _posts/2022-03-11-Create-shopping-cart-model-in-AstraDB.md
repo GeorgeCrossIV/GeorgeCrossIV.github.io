@@ -26,21 +26,44 @@ By the end of this article, the reader should be able to create a data store in 
 - Login in to Astra (https://astra.datastax.com)
 <img src="/img/posts/astra-login.png" alt="Astra Login Screen" width="350"> 
 - Select your database
-<img src="/img/posts/select-database-and-cql-console.png>" alt="Select Database" width="350">
+ <img src="/img/posts/select-database-and-cql-console.png" alt="Select Database" width="350">
+- Create the shopping_cart keyspace
+ <img src="/img/posts/create-keyspace-part1.png" alt="Select Database" width="350">
+  <img src="/img/posts/create-keyspace-part2.png" alt="Select Database" width="350">
 - Click CQL Console
-<img src="/img/posts/astra-cql-console.png>" alt="Select Database" width="350">
+<img src="/img/posts/astra-cql-console.png" alt="Select Database" width="350">
+- Create the shopping_cart_data table
 ~~~ 
-CREATE TABLE shopping_cart_data.items_by_cart (
-    cart_id uuid,
-    timestamp timestamp,
-    item_id text,
-    cart_subtotal decimal static,
-    item_description text,
-    item_name text,
-    item_price decimal,
-    quantity int,
-    PRIMARY KEY (cart_id, timestamp, item_id)
-);
+    CREATE TABLE shopping_cart_data.items_by_cart (
+        cart_id uuid,
+        timestamp timestamp,
+        item_id text,
+        cart_subtotal decimal static,
+        item_description text,
+        item_name text,
+        item_price decimal,
+        quantity int,
+        PRIMARY KEY (cart_id, timestamp, item_id)
+    );
 ~~~
-
+- create the shopping_cart_data.items_by_id table
+~~~
+    CREATE TABLE shopping_cart_data.items_by_id (
+        id text PRIMARY KEY,
+        description text,
+        name text,
+        price decimal
+    );
+~~~
+- create the shopping_cart_data.carts_by_user table
+~~~
+    CREATE TABLE shopping_cart_data.carts_by_user (
+        user_id text,
+        cart_name text,
+        cart_id uuid,
+        cart_is_active boolean,
+        user_email text static,
+        PRIMARY KEY (user_id, cart_name, cart_id)
+    );
+~~~
 

@@ -1,4 +1,4 @@
-I",<h1 id="introduction">Introduction</h1>
+I",<h1 id="introduction">Introduction</h1>
 <p>Astra DB simplifies cloud-native Cassandra application development. This blog will walk the reader through creating a shopping cart model in Astra DB.</p>
 
 <h2 id="problem">Problem</h2>
@@ -22,9 +22,13 @@
   <li>Login in to Astra (https://astra.datastax.com)
 <img src="/img/posts/astra-login.png" alt="Astra Login Screen" width="350" /></li>
   <li>Select your database
-<img src="/img/posts/select-database-and-cql-console.png&gt;" alt="Select Database" width="350" /></li>
+ <img src="/img/posts/select-database-and-cql-console.png" alt="Select Database" width="350" /></li>
+  <li>Create the shopping_cart keyspace
+ <img src="/img/posts/create-keyspace-part1.png" alt="Select Database" width="350" />
+<img src="/img/posts/create-keyspace-part2.png" alt="Select Database" width="350" /></li>
   <li>Click CQL Console
-<img src="/img/posts/astra-cql-console.png&gt;" alt="Select Database" width="350" />
+<img src="/img/posts/astra-cql-console.png" alt="Select Database" width="350" /></li>
+  <li>Create the shopping_cart_data table
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE shopping_cart_data.items_by_cart (
   cart_id uuid,
   timestamp timestamp,
