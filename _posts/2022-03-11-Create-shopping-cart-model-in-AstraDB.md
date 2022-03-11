@@ -24,14 +24,14 @@ By the end of this article, the reader should be able to create a data store in 
 # Steps
 ## Open the Astra DB Console
 - Login in to Astra (https://astra.datastax.com)
-<img src="/img/posts/astra-login.png" alt="Astra Login Screen" width="350"> 
+<img src="/img/posts/astra-login.png" alt="Astra Login Screen" width="650"> 
 - Select your database
- <img src="/img/posts/select-database-and-cql-console.png" alt="Select Database" width="350">
+ <img src="/img/posts/select-database-and-cql-console.png" alt="Select Database" width="650">
 - Create the shopping_cart keyspace
- <img src="/img/posts/create-keyspace-part1.png" alt="Select Database" width="350">
-  <img src="/img/posts/create-keyspace-part2.png" alt="Select Database" width="350">
+ <img src="/img/posts/create-keyspace-part1.png" alt="Select Database" width="650">
+  <img src="/img/posts/create-keyspace-part2.png" alt="Select Database" width="650">
 - Click CQL Console
-<img src="/img/posts/astra-cql-console.png" alt="Select Database" width="350">
+<img src="/img/posts/astra-cql-console.png" alt="Select Database" width="650">
 - Create the shopping_cart_data table
 ~~~ 
     CREATE TABLE shopping_cart_data.items_by_cart (
