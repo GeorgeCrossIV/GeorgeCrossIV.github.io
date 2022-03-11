@@ -1,3 +1,0 @@
-I"’<p>#Introduction
-Astra DB simplifies cloud-native Cassandra application development. Each DataStax Astra DB database includes an embedded CQL shell instance. In the Astra DB console, navigate to your database and click the CQL Console tab to open a CQLSH instance that is connected to your database. Issue CQL commands directly to your Astra DB database without navigating outside of your browser.</p>
-:ET
