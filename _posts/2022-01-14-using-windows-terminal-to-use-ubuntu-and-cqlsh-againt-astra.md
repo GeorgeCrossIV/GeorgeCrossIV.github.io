@@ -26,5 +26,54 @@ By the end of this article, you should be able to use a desktop terminal applica
 - Have installed the Windows Subsystem for Unix (WSL)
 - Have installed a Linux instance in the WSL. This article assumes Ubuntu has been installed; however, any Linux flavor will do.
 
-some text here
-Configuring the CQL Shell to connect to Astra - https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html
+# Procedure
+- Download the Windows Terminal app from the Microsoft Store. Note - the Terminal app is already installed if using Windows 11. 
+    - Open Microsoft Store
+    - Search for "Windows Terminal"
+    <img src="/img/posts/microsoft-store-windows-terminal.png" alt="Microsoft Store - Windows Terminal" width="650">
+    - Install
+- Install Ubuntu (if necessary)
+- Configure Windows Terminal app with shortcuts
+    - Start Windows Terminal. PowerShell should be the default Window
+        <img src="/img/posts/windows-terminal-powershell.png" alt="Windows Terminal - PowerShell" width="650">
+
+    - Create a new Terminal entry (if necessary)
+        - Find list of Linux distributions
+            ~~~
+            wsl.exe -l --all
+            ~~~
+            <img src="/img/posts/powershell-display-linux-distributions.png" alt="PowerShell - Display Linux Distributions" width="650">
+        - Open the Settings screen
+            <img src="/img/posts/windows-terminal-open-settings-part1.png" alt="Windows Terminal - Open Settings" width="650">        
+            <img src="/img/posts/windows-terminal-open-settings-part2.png" alt="Windows Terminal - Open Settings" width="650">   
+        - Edit the settings file
+        <img src="/img/posts/windows-terminal-add-terminal-tab-part1.png" alt="Windows Terminal - Add terminal tab" width="650"> 
+            - Find the "list" section in the JSON
+            - Add an entry for the Linux Distribution
+            ~~~
+            {
+                "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
+                "hidden": false,
+                "name": "Ubuntu-16.04",
+                "source": "Windows.Terminal.Wsl"
+            }
+            ~~~   
+                - use a GUID generator to provide a unique GUID for the guid key
+                - use the name of the Linux distribution name from the previous step from executing the wsl -l --all step.
+                - Save the file   
+        - Restart Windows Terminal
+- Open a new terminal tab for a Linux distribution
+    <img src="/img/posts/windows-terminal-open-new-terminal-tab.png" alt="Windows Terminal - Open new terminal tab" width="650">  
+    - Click the down arrow to display the list of available terminal types
+    - Click the Ubuntu distribution, which should open a new terminal tab
+    - Note - If there are no Linux distributions, use the steps above to add a new entry  
+    <img src="/img/posts/windows-terminal-open-new-linux-distribution-tab.png" alt="Windows Terminal - Open new terminal tab" width="650"> 
+
+            
+# Results
+The reader should now have a stand-alone console that can be used to connect to and manage Astra DB. 
+
+# Next Steps
+
+# References
+- Configuring the CQL Shell to connect to Astra - https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html
