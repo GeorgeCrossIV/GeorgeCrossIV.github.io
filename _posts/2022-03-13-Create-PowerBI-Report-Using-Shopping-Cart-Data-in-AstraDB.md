@@ -50,7 +50,7 @@ By the end of this article, the reader should be able to create a Power BI repor
         <img src="/img/posts/odbc-driver-test-results.png" alt="Test ODBC Driver" width="650">
             - should show that test test was successful
 - Create the Power BI Report
-    - Start Power BI
+    - Start Power BI in Administrator mode
     <img src="/img/posts/start-power-bi-desktop.png" alt="Start Power BI Desktop" width="650">
     - Click Get Data
     <img src="/img/posts/power-bi-desktop-get-data.png" alt="Power BI Get Data" width="650">
