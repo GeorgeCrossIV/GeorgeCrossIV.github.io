@@ -156,4 +156,4 @@ The reader should now have a functioning shopping cart database in the shopping_
 # Next Steps
 The following activities are designed to use the shopping cart data:
 - Write a C# Shopping Cart MVC application using REST against Astra DB
-- Create a PowerBI report using Shopping Cart data in Astra DB
+- [Create a PowerBI report using Shopping Cart data in Astra DB](/2022/03/13/Create-PowerBI-Report-Using-Shopping-Cart-Data-in-AstraDB.html)
