@@ -48,4 +48,13 @@ I have intermediate/expert knowledge of Microsoft’s application platform techn
 - Microsoft Specialist – Azure
 - AWS Certified Solutions Architect - Associate
 
-I am an all-around sports and game fanatic.  My favorite sport of the last several years has been tennis; which I am a solid USTA 3.5 player.  I play table tennis where I’m rated about 1500 and I’m rated about 1500 in Chess.  I also enjoy coaching and playing basketball with my boys.  
+I am an all-around sports and game fanatic.  My favorite sport of the last several years has been tennis; which I am a solid USTA 3.5 player.  I play table tennis where I’m rated about 1500 and I’m rated about 1500 in Chess.  I also enjoy coaching and playing basketball with my boys. 
+
+# Badges
+<img src="https://d1vy0qa05cdjr5.cloudfront.net/068d25ee-7001-4cee-85cb-badc85d2c56a/Badges/Admin%20LP%20Completion%20Badge.png">
+<img src="https://d1vy0qa05cdjr5.cloudfront.net/068d25ee-7001-4cee-85cb-badc85d2c56a/DS101%20Completion%20Badge.png">
+<img src="https://d1vy0qa05cdjr5.cloudfront.net/068d25ee-7001-4cee-85cb-badc85d2c56a/Badges/DS201%20Completion%20Badge.png">
+<img src="https://d1vy0qa05cdjr5.cloudfront.net/068d25ee-7001-4cee-85cb-badc85d2c56a/Badges/DS210%20Completion%20Badge.png">
+<img src="https://d1vy0qa05cdjr5.cloudfront.net/068d25ee-7001-4cee-85cb-badc85d2c56a/Badges/DS220%20Completion%20Badge.png">
+<img src="https://api.badgr.io/public/assertions/1thxZX7XQNK4OIO7OaRMDw/image" width="120">
+<img src="https://api.badgr.io/public/assertions/x9F9LjX5QoOgbf-d8QI_Zg/image" width="120">
