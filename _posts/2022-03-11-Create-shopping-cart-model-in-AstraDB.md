@@ -67,13 +67,17 @@ By the end of this article, the reader should be able to create a data store in 
 ~~~
 - create the users table
 ~~~
-    CREATE TABLE users (
+    CREATE TABLE shopping_cart_data.users (
         user_id TEXT,
         first_name TEXT,
         last_name TEXT,
         user_email TEXT,
         PRIMARY KEY ((user_id))
     );
+~~~
+- Issue a statement to use the shopping_cart_data keyspace
+~~~
+USE shopping_cart_data;
 ~~~
 - Populate data for carts by user
 ~~~
