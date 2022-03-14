@@ -19,7 +19,7 @@ I'm primarily a Microsoft Stack developer and I'd like the solution to be able w
 ## Goal
 By the end of this article, you should be able to use a desktop terminal application to connect to your Astra database.
 
-# Prerequistes
+# Prerequisites
 - Windows 10 or Windows 11
 - Have created an Astra DB account and associated credentials.
 - Have installed the Windows Terminal application

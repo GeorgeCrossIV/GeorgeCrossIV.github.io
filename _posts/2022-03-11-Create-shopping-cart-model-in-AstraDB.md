@@ -17,7 +17,7 @@ This blog is targeted to database and application developers.
 ## Goal
 By the end of this article, the reader should be able to create a data store in the cloud using Astra DB. The data store can be used for any application development or reporting effort.
 
-# Prerequistes
+# Prerequisites
 - Have created an Astra DB account and associated credentials.
 - (Optional) Have installed and configured a terminal with the astra-cqlsh application
 
@@ -145,7 +145,11 @@ By the end of this article, the reader should be able to create a data store in 
     INSERT INTO users (user_id, first_name, last_name, user_email) VALUES ('jim', 'Jim', 'Troubleshooter', 'jim@datastax.com');
     INSERT INTO users (user_id, first_name, last_name, user_email) VALUES ('joe', 'Joe', 'Operator', 'joe@datastax.com');
 ~~~
+
 # Results
-The reader should now have a functioning shopping cart database in the shopping_cart_data keyspace. The following activities are designed to use the shopping cart data:
+The reader should now have a functioning shopping cart database in the shopping_cart_data keyspace. 
+
+# Next Steps
+The following activities are designed to use the shopping cart data:
 - Write a C# Shopping Cart MVC application using REST against Astra DB
 - Create a PowerBI report using Shopping Cart data in Astra DB
