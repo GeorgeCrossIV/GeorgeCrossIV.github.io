@@ -50,7 +50,7 @@ By the end of this article, you should be able to use a desktop terminal applica
         <img src="/img/posts/windows-terminal-add-terminal-tab-part1.png" alt="Windows Terminal - Add terminal tab" width="650"> 
             - Find the "list" section in the JSON
             - Add an entry for the Linux Distribution
-            ~~~
+            ~~~json
             {
                 "guid": "{6f9994f0-4403-5e85-9cce-98e5da3839bb}",
                 "hidden": false,
@@ -68,12 +68,37 @@ By the end of this article, you should be able to use a desktop terminal applica
     - Click the Ubuntu distribution, which should open a new terminal tab
     - Note - If there are no Linux distributions, use the steps above to add a new entry  
     <img src="/img/posts/windows-terminal-open-new-linux-distribution-tab.png" alt="Windows Terminal - Open new terminal tab" width="650"> 
+- Install Standalone CQL Shell
+    - use the [Standalone CQL Shell article](https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html) to install and configure
+        - I recommend that you configure the cqlshrc file in the ~/.cassandra folder to prevent typing the client id and client secret each time you want to start the CQL shell.
+    - Notes: You must have Python installed to run the cqlsh-astra standalone client. A version of Python with SSL support is also required. I've had issues running Python 2.7 in Ubuntu versions earlier than 20.06. 
+        - There is a method for compiling an older version of Python 2.7 with SSL support. I'll update this blog with the information once I find it. In the meantime, I recommend using Ubuntu 20.06 or installing Python 3.x. Be aware that you need Python 2.7 if you are also running DSE in the Linux distribution.
+- Update your .bashrc file with the cqlsh-astra folder
+    - Assuming the installation folder for cqlsh-astra is ~/cqlsh-astra.
+    - add the following to the .bashrc file
+    ~~~
+    export PATH=$PATH:~/cqlsh-astra/bin
+    ~~~ 
+    - source your .bashrc file
+    ~~~
+    $ source .bashrc
+    ~~~
+- Start the cqlsh
+~~~
+$ cqlsh
+~~~
+<img src="/img/posts/windows-terminal-start-astra-cqlsh.png" alt="Windows Terminal - Start Astra CQLSH" width="650"> 
+- Display the keyspaces
+~~~
+cqlsh> desc keyspaces;
+~~~
+<img src="/img/posts/astra-cqlsh-display-keyspaces.png" alt="Astra CQLSH - Display keyspaces" width="650"> 
 
-            
 # Results
 The reader should now have a stand-alone console that can be used to connect to and manage Astra DB. 
 
 # Next Steps
+- [Create the shopping cart data in Astra DB](/2022/03/11/Create-shopping-cart-model-in-AstraDB.html)
 
 # References
-- Configuring the CQL Shell to connect to Astra - https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html
+- <a href="https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html" target="_blank">Configuring the CQL Shell to connect to Astra</a>

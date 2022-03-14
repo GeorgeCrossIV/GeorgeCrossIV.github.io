@@ -32,7 +32,7 @@ By the end of this article, the reader should be able to create a data store in 
 - Click CQL Console
 <img src="/img/posts/astra-cql-console.png" alt="Select Database" width="650">
 - Create the shopping_cart_data table
-~~~ 
+~~~sql 
     CREATE TABLE shopping_cart_data.items_by_cart (
         cart_id uuid,
         timestamp timestamp,

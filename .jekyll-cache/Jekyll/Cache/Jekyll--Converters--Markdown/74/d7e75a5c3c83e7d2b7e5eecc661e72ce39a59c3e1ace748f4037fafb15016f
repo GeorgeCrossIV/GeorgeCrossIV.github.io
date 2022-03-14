@@ -1,0 +1,106 @@
+I"�<h1 id="introduction">Introduction</h1>
+<p>Astra DB simplifies cloud-native Cassandra application development. Each DataStax Astra DB database includes an embedded CQL shell instance. In the Astra DB console, navigate to your database and click the CQL Console tab to open a CQLSH instance that is connected to your database. Issue CQL commands directly to your Astra DB database without navigating outside of your browser.</p>
+
+<p>As convenient as it is to be able to access the CQL Console in the browser, a developer may want additional flexibility of connecting to Astra via a CQL Console in a desktop application. As a developer, I often like to have prefer to have multiple terminal open. For example, I might work in two keyspaces simultaneously and want a CQL session for each keyspace. I often like keeping a CQL Console to view or manage DDL while using a seperate CQL Console for DML.</p>
+
+<h2 id="problem">Problem</h2>
+<p>As a developer, I’d like to be to manage multiple CQL Consoles that connect to my Astra database.</p>
+
+<h2 id="audience">Audience</h2>
+<p>I’m primarily a Microsoft Stack developer and I’d like the solution to be able work within my Windows environment. This article is for you if you develop in the Windows environment. There are many terminal applications to choose from; however, this article will use a simple and free terminal application named Windows Terminal.</p>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this article, you should be able to use a desktop terminal application to connect to your Astra database.</p>
+
+<h1 id="prerequistes">Prerequistes</h1>
+<ul>
+  <li>Windows 10 or Windows 11</li>
+  <li>Have created an Astra DB account and associated credentials.</li>
+  <li>Have installed the Windows Terminal application</li>
+  <li>Have installed the Windows Subsystem for Unix (WSL)</li>
+  <li>Have installed a Linux instance in the WSL. This article assumes Ubuntu has been installed; however, any Linux flavor will do.</li>
+</ul>
+
+<h1 id="procedure">Procedure</h1>
+<ul>
+  <li>Download the Windows Terminal app from the Microsoft Store. Note - the Terminal app is already installed if using Windows 11.
+    <ul>
+      <li>Open Microsoft Store</li>
+      <li>Search for “Windows Terminal”
+  <img src="/img/posts/microsoft-store-windows-terminal.png" alt="Microsoft Store - Windows Terminal" width="650" /></li>
+      <li>Install</li>
+    </ul>
+  </li>
+  <li>Install Ubuntu (if necessary)</li>
+  <li>Configure Windows Terminal app with shortcuts
+    <ul>
+      <li>
+        <p>Start Windows Terminal. PowerShell should be the default Window
+  <img src="/img/posts/windows-terminal-powershell.png" alt="Windows Terminal - PowerShell" width="650" /></p>
+      </li>
+      <li>
+        <p>Create a new Terminal entry (if necessary)</p>
+        <ul>
+          <li>Find list of Linux distributions
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  wsl.exe -l --all
+</code></pre></div>            </div>
+            <p><img src="/img/posts/powershell-display-linux-distributions.png" alt="PowerShell - Display Linux Distributions" width="650" /></p>
+          </li>
+          <li>Open the Settings screen
+  <img src="/img/posts/windows-terminal-open-settings-part1.png" alt="Windows Terminal - Open Settings" width="650" />      <br />
+  <img src="/img/posts/windows-terminal-open-settings-part2.png" alt="Windows Terminal - Open Settings" width="650" /></li>
+          <li>Edit the settings file
+  <img src="/img/posts/windows-terminal-add-terminal-tab-part1.png" alt="Windows Terminal - Add terminal tab" width="650" />
+            <ul>
+              <li>Find the “list” section in the JSON</li>
+              <li>Add an entry for the Linux Distribution
+                <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"guid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{6f9994f0-4403-5e85-9cce-98e5da3839bb}"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ubuntu-16.04"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Windows.Terminal.Wsl"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div>                </div>
+                <ul>
+                  <li>use a GUID generator to provide a unique GUID for the guid key</li>
+                  <li>use the name of the Linux distribution name from the previous step from executing the wsl -l –all step.</li>
+                  <li>Save the file</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Restart Windows Terminal</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Open a new terminal tab for a Linux distribution
+  <img src="/img/posts/windows-terminal-open-new-terminal-tab.png" alt="Windows Terminal - Open new terminal tab" width="650" />
+    <ul>
+      <li>Click the down arrow to display the list of available terminal types</li>
+      <li>Click the Ubuntu distribution, which should open a new terminal tab</li>
+      <li>Note - If there are no Linux distributions, use the steps above to add a new entry<br />
+  <img src="/img/posts/windows-terminal-open-new-linux-distribution-tab.png" alt="Windows Terminal - Open new terminal tab" width="650" /></li>
+    </ul>
+  </li>
+  <li>Install Standalone CQL Shell
+    <ul>
+      <li>use <a href="https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html">Standalone CQL Shell article</a> to install and configure
+        <ul>
+          <li>I recommend that you configure the cqlshrc file in the ~/.cassandra folder to prevent typing the client id and client secret each time you want to start the CQL shell.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="results">Results</h1>
+<p>The reader should now have a stand-alone console that can be used to connect to and manage Astra DB.</p>
+
+<h1 id="next-steps">Next Steps</h1>
+
+<h1 id="references">References</h1>
+<ul>
+  <li><a href="https://docs.datastax.com/en/astra/docs/connecting-to-databases-using-standalone-cqlsh.html">Configuring the CQL Shell to connect to Astra</a></li>
+</ul>
+:ET
