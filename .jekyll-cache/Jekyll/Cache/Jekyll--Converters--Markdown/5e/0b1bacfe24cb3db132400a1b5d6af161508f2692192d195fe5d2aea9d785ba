@@ -1,0 +1,130 @@
+I"�<h1 id="introduction">Introduction</h1>
+<p>Astra DB simplifies cloud-native Cassandra application development. This blog will walk the reader through creating a PowerBI report against shopping cart data in Astra DB.</p>
+
+<h2 id="problem">Problem</h2>
+<p>As a report developer, I’d like to create a Power BI report using shopping cart data stored in Astra DB.</p>
+
+<h2 id="audience">Audience</h2>
+<p>This blog is targeted to Power BI developers who use the Microsoft development stack. It is assumed that the developer will use a 64-bit Windows environment.</p>
+
+<h2 id="goal">Goal</h2>
+<p>By the end of this article, the reader should be able to create a Power BI report using data stored in the cloud using Astra DB.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+  <li>Have created an Astra DB account and associated credentials.</li>
+  <li>Have created the Shopping Cart data in Astra DB. <a href="/2022/03/11/Create-shopping-cart-model-in-AstraDB.html">Using this blog to complete</a></li>
+  <li>Installed Power BI Desktop. <a href="https://powerbi.microsoft.com/en-us/downloads/" target="_blank">Download here </a></li>
+  <li>Downloaded the connection bundle to the Windows client</li>
+</ul>
+
+<h1 id="procedure">Procedure</h1>
+<ul>
+  <li>Configure the Apache Cassandra ODBC Driver
+    <ul>
+      <li>Download the ODBC Driver <a href="https://downloads.datastax.com/#odbc-jdbc-drivers" target="_blank">download here</a>
+  <img src="/img/posts/downloads-datastax-odbc.png" alt="ODBC Download" width="650" />
+        <ul>
+          <li>Change the package to “Windows (64-bit)”</li>
+          <li>Click the agreement box and then the download button</li>
+        </ul>
+      </li>
+      <li>Install the ODBC drivers.
+        <ul>
+          <li>review the <a href="https://www.datastax.com/blog/how-use-datastax-odbc-drivers" target="_blank">How to Use DataStax ODBC Drivers blog</a></li>
+          <li>Start the ODBC Data Sources (64-bit) application
+  <img src="/img/posts/start-odbc-data-sources.png" alt="Start ODBC data sources" width="650" /></li>
+          <li>Create new ODBC Entry
+  <img src="/img/posts/odbc-data-source-administrator.png" alt="ODBC Data Source Administrator" width="650" /></li>
+          <li>Create a new DataStax Cassandra ODBC Data Source
+  <img src="/img/posts/create-new-data-source.png" alt="Create new data source" width="650" /></li>
+          <li>Configure the Cassandra ODBC Driver
+  <img src="/img/posts/configure-cassandra-odbc-driver.png" alt="Configure Cassandra ODBC Driver" width="650" />
+            <ul>
+              <li>Data Source Name: “Astra Shopping Cart”</li>
+              <li>Descripton: “Astra Shopping Cart Demo”</li>
+              <li>Default keyspace: “shopping_cart_data”</li>
+              <li>Mechanism: “Cloud Secure Connection Bundle”</li>
+              <li>User name: client id goes here</li>
+              <li>Password: client secret goes here</li>
+              <li>Connection Bundle: path to the connection bundle</li>
+            </ul>
+          </li>
+          <li>Test the client. Click the Test button
+  <img src="/img/posts/odbc-driver-test-results.png" alt="Test ODBC Driver" width="650" />
+            <ul>
+              <li>should show that test test was successful</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Create the Power BI Report
+    <ul>
+      <li>Start Power BI
+  <img src="/img/posts/start-power-bi-desktop.png" alt="Start Power BI Desktop" width="650" /></li>
+      <li>Click Get Data
+  <img src="/img/posts/power-bi-desktop-get-data.png" alt="Power BI Get Data" width="650" /></li>
+      <li>Configure ODBC Connection
+  <img src="/img/posts/power-bi-desktop-configure-odbc-part1.png" alt="Configure ODBC Connections" width="650" />
+        <ul>
+          <li>Select “Other”</li>
+          <li>Select “ODBC”</li>
+          <li>Click “Connect”</li>
+        </ul>
+      </li>
+      <li>Select the ODBC Data Source
+  <img src="/img/posts/power-bi-desktop-select-odbc-source.png" alt="Select ODBC Data Source" width="650" />
+        <ul>
+          <li>Change drop down to “Astra Shopping Cart”</li>
+          <li>Click OK</li>
+        </ul>
+      </li>
+      <li>Authenticate the ODBC Connection
+  <img src="/img/posts/power-bi-desktop-authenticate-odbc.png" alt="Authenticate the ODBC Connection" width="650" />
+        <ul>
+          <li>user name: use the client id from Astra DB</li>
+          <li>password: use the client secret from Astra DB</li>
+        </ul>
+      </li>
+      <li>Load the Shopping Cart data
+  <img src="/img/posts/power-bi-desktop-load-data.png" alt="Load the Shopping Cart Data" width="650" />
+        <ul>
+          <li>Expand “Cassandra”</li>
+          <li>Expand “shopping_cart_data” keyspace</li>
+          <li>check the following:
+            <ul>
+              <li>carts_by_user</li>
+              <li>items_by_cart</li>
+              <li>users</li>
+            </ul>
+          </li>
+          <li>Click the “Load” button</li>
+        </ul>
+      </li>
+      <li>Configure Page Visuals
+        <ul>
+          <li>Add user slicer
+  <img src="/img/posts/power-bi-desktop-add-user-slicer.png" alt="Add User slicer" width="650" />
+            <ul>
+              <li>Click Users table</li>
+              <li>click “last_name” field checkbox</li>
+              <li>Click the slicer visualization</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="results">Results</h1>
+<p>The reader should now have a functioning Power BI report that uses the shopping cart database in Astra DB.</p>
+
+<h1 id="next-steps">Next Steps</h1>
+<p>The following activities are designed to use the shopping cart data:</p>
+<ul>
+  <li>Write a C# Shopping Cart MVC application using REST against Astra DB</li>
+</ul>
+:ET
